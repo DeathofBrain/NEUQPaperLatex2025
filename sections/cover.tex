@@ -1,0 +1,72 @@
+\begin{titlepage}
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=0.92\textwidth]{images/cover.png}
+	\vspace{-2.5em}
+	\end{figure}
+	
+	\begin{center}
+		\quad \\
+		\quad \\
+		\heiti \zihao{-0} 毕业论文
+		\vskip 0.5em
+		\heiti \zihao{2} 基于XXXXXXXX
+	\end{center}
+	\vskip 1em
+	
+	\makeatletter
+	
+	\newcommand\dlmu[2][8em]{\underline{\hb@xt@ #1{\hss#2\hss}}}
+	\newcommand{\kernword}[1]{\expandafter\kernwordaux#1\relax}
+	\def\kernwordaux#1{%
+		\ifx\relax#1\else
+		#1\hspace{0.1em}\expandafter\kernwordaux % 这里调整下面表项的字距 默认0.1em 实际自行调整
+		\fi}
+	\makeatother	
+	\begin{center}
+		\zihao{-3}
+		\heiti
+		\renewcommand\arraystretch{0.72} 
+		\setlength\extrarowheight{5mm} 
+		\begin{tabular}[b]{b{-0.5em}b{4em}b{0.25em}b{16em}<{\centering}}
+			%\cline{4-4}
+			&\makebox[4em][s]{院\ \ \ \ \ \ \ \ 别}  &   &\kernword{XXX学院} \\
+			\cline{4-4}
+			&\makebox[4em][s]{专业名称}    &   &\kernword{XXXX} \\
+			\cline{4-4}
+			&\makebox[4em][s]{班级学号}    &   &\bf{\kernword{21XX-2021XXXXX}} \\  % 加粗+字距
+			\cline{4-4}
+			&\makebox[4em][s]{学生姓名}    &   &\kernword{XX} \\ 
+			\cline{4-4}
+			&\makebox[4em][s]{指导教师}    &   &\kernword{XXXX} \\
+			\cline{4-4}
+		\end{tabular}
+	\end{center}
+
+%多行注释
+% \iffalse
+% 	\begin{center}
+% 		\zihao{-3}
+% 		\heiti
+% 		\renewcommand\arraystretch{1.08} 
+% 		\setcellgapes [b]{0.5mm}
+% 		\begin{tabular}[b]{rl}
+% 			&\makebox[4em][s]{院\ \ \ \ \ \ \ \ 别}	\quad		\dlmu[16em]{X X X 学\ 院}      \\
+% 			&\makebox[4em][s]{专业名称}	\quad	\dlmu[16em]{X X X 工\ 程}   \\
+% 			&\makebox[4em][s]{班级学号}	\quad	\dlmu[16em]{\bf{1601-20165678}}   \\
+% 			&\makebox[4em][s]{学生姓名}	\quad	\dlmu[16em]{李 X X}   \\ 
+% 			&\makebox[4em][s]{指导教师}	\quad	\dlmu[16em]{X X X \ \ \ \ 教\ 授}   \\
+% 		\end{tabular}
+% 	\end{center}
+% \fi
+
+
+% 日期
+\vskip 1em
+\centering
+\zihao{-3} \bf{202X}年\bf{X}月
+
+
+
+\end{titlepage}
+\cleardoublepage
