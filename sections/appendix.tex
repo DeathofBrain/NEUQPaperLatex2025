@@ -1,8 +1,9 @@
 \appendix
 
-\section*{附\ \ \ \ \ \ \ \ 录}
+\specialsection{附\ \ \ \ \ \ \ \ 录}
+% \section*{附\ \ \ \ \ \ \ \ 录}
 
-\addcontentsline{toc}{section*}{附\ \ \ \ \ \ \ \ 录}
+% \addcontentsline{toc}{section*}{附\ \ \ \ \ \ \ \ 录}
 
 %创建单独appendix计数器，解决目录中附录样式问题
 
@@ -14,8 +15,9 @@
 \newcommand{\appendsection}[1]{
 	\titleformat*{\subsection}{}
 	\zihao{-4}\heiti
-	\subsection*{附录\Alph{appendix}}
+	\phantomsection
 	\addcontentsline{toc}{subsection*}{附录\Alph{appendix}}
+	\subsection*{附录\Alph{appendix}}
 	{\centering\paragraph{#1}\mbox{}\\}\songti
 }
 

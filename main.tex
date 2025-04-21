@@ -1,6 +1,5 @@
 %!TEX program = xelatex
 \documentclass[11pt,punct,twoside]{ctexart}
-% \usepackage[colorlinks,linkcolor=black]{hyperref}
 \usepackage{titling}
 \usepackage[a4paper, left=3cm, right=2cm, top=3cm, bottom=2.5cm]{geometry}
 \usepackage{fancyhdr, graphicx, xpatch, layout}
@@ -12,6 +11,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{titletoc}
+\usepackage[colorlinks,linkcolor=black]{hyperref}
 \usepackage{tabularx}
 \usepackage{chngcntr}
 \usepackage{listings}
@@ -94,6 +94,11 @@
 \DeclareCaptionFormat{myformat}{\zihao{5}\selectfont#1#2#3}
 \captionsetup{format=myformat}
 \captionsetup{labelsep=quad}%图表号与图表名之间空两格
+\newcommand{\specialsection}[1]{% 正文后诸如“致谢”之类的章节，解决超链接问题
+  \phantomsection
+  \addcontentsline{toc}{section*}{\heiti\zihao{-4}#1}
+  \section*{#1}
+}
 
 %------------------文档开始------------------
 \begin{document}
@@ -137,6 +142,7 @@
 \bibliographystyle{gbt7714-2005}
 %\bibliographystyle{unsrt}
 \nocite{*}
+\phantomsection
 \addcontentsline{toc}{section*}{参考文献}
 
 \renewcommand\bibnumfmt[1]{\makebox[0.9cm][l]{[#1]}}
