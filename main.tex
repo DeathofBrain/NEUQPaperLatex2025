@@ -100,6 +100,15 @@
   \section*{#1}
 }
 
+\newcommand{\addimage}[4]{ % 添加图片 #1为宽度 #2为图片路径 #3为图片标题 #4为图片标签
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#1\textwidth]{#2}
+    \caption{\ \ #3}\label{#4}
+    \vspace{-1em}
+  \end{figure}
+}
+
 %------------------文档开始------------------
 \begin{document}
 \pagestyle{empty}

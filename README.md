@@ -14,6 +14,41 @@ Windows11 系统下的VSCode和Texlive-2025，使用xelatex->bibtex->xelatex*2�
 关于如何配置VSC下的Latex环境，请参考[VScode写LaTeX配置，实测有效](https://blog.csdn.net/BO_S__/article/details/136129261)
 > 万物皆可VSCode
 
+## 自定义命令
+
+- 添加附录
+
+```tex
+\newcommand{\specialsection}[1]{% 正文后诸如“致谢”之类的章节，解决超链接问题
+  \phantomsection
+  \addcontentsline{toc}{section*}{\heiti\zihao{-4}#1}
+  \section*{#1}
+}
+
+%使用例
+\specialsection{附\ \ \ \ \ \ \ \ 录}
+
+
+```
+
+- 添加图片
+
+```tex
+\newcommand{\addimage}[4]{ % 添加图片 #1为宽度 #2为图片路径 #3为图片标题 #4为图片标签
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#1\textwidth]{#2}
+    \caption{\ \ #3}\label{#4}
+    \vspace{-1em}
+  \end{figure}
+}
+
+%使用例
+\addimage{0.1~1}{图片路径}{图片标题}{fig:something}
+
+```
+其他待更新
+
 ---
 以下为原模板部分README
 
