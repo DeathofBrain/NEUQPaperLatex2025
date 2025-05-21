@@ -47,6 +47,41 @@ Windows11 系统下的VSCode和Texlive-2025，使用xelatex->bibtex->xelatex*2�
 \addimage{0.1~1}{图片路径}{图片标题}{fig:something}
 
 ```
+
+可跨页长表指令模板：
+
+```tex
+\begin{small}
+    \begin{longtable}{>{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth}}
+        \caption{\ \ 评价表设计}\label{tab:comment} \\ 
+        \toprule[1.5pt]
+        字段名 & 数据类型 & 长度 & 约束条件 & 说明 \\ 
+        \midrule[0.5pt]
+        \endfirsthead
+        
+        \multicolumn{5}{r}{\tablename\ \thetable\ （续表）} \\ 
+        \toprule[1.5pt]
+        字段名 & 数据类型 & 长度 & 约束条件 & 说明 \\ 
+        \midrule[0.5pt]
+        \endhead
+        
+        \midrule[1.5pt]
+        \endfoot
+
+        \bottomrule[1.5pt]
+        \endlastfoot
+        
+        id & INT & 11 & PRIMARY KEY & 评价ID \\ 
+        order\_id & INT & 11 & NOT NULL & 订单ID \\ 
+        customer\_id & INT & 11 & NOT NULL & 顾客ID \\ 
+        rating & INT & 11 & NOT NULL & 评分 \\ 
+        content & TEXT & - & NULL & 评价内容 \\ 
+        is\_reported & BOOLEAN & - & NULL & 是否举报 \\ 
+    \end{longtable}
+    \vspace{-1.5em}
+\end{small}
+```
+
 其他待更新
 
 ---

@@ -33,6 +33,7 @@
 %\usepackage{longtabu}
 \usepackage{tabu}
 \usepackage{makecell}
+\usepackage{pdfpages}
 %\usepackage{showframe}
 
 % 微分算子
@@ -114,8 +115,19 @@
 \begin{document}
 \pagestyle{empty}
 \include{sections/cover}
-\include{sections/statement}
-
+% \includepdf{images/cover.pdf}    请使用自己所在院模板的封面转为的pdf，放在images中，单页pdf
+% %---- 插入空白页
+% \clearpage
+% \phantom{s}
+% \clearpage
+% %----
+% \include{sections/statement}
+\includepdf{images/statement.pdf}
+%---- 插入空白页
+\clearpage
+\phantom{s}
+\clearpage
+%----
 %页眉页脚
 \pagestyle{fancy}
 %\setlength{\voffset}{3pt}
