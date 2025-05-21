@@ -53,6 +53,7 @@ Windows11 系统下的VSCode和Texlive-2025，使用xelatex->bibtex->xelatex*2�
 ```tex
 \begin{small}
     \begin{longtable}{>{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.17\linewidth}}
+    % 有几列写几个>{\centering\arraybackslash}p{(0.85/列数)\linewidth}
         \caption{\ \ 评价表设计}\label{tab:comment} \\ 
         \toprule[1.5pt]
         字段名 & 数据类型 & 长度 & 约束条件 & 说明 \\ 
